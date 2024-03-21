@@ -12,4 +12,16 @@ class LinkedList{
         this.size = 0;
     }
 
+    // Append a new node containing the value to the end of the list
+    append(value){
+        const newNode = new Node(value);
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }else{
+            
+            
+        }
+    }
+
 }
