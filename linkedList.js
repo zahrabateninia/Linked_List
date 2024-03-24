@@ -37,6 +37,16 @@ class LinkedList{
         }
         this.size++;
     }
-    
+    size(){
+        return this.size;
+    }    
+    // Return the first node
+    head(){
+        return this.head;
+    }
+    // Return the last node
+    tail(){
+        return this.tail;
+    }
 
 }
