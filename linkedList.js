@@ -19,9 +19,11 @@ class LinkedList{
             this.head = newNode;
             this.tail = newNode;
         }else{
-            
+            this.tail.nextNode = newNode;
+            this.tail = newNode;
             
         }
+        this.size++;
     }
 
 }
