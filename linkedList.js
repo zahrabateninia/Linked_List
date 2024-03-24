@@ -48,5 +48,14 @@ class LinkedList{
     tail(){
         return this.tail;
     }
+    // Return the node at the given index
+    at(index){
+        if(index < 0 || index > this.size ) return null;
+        let currentNode = this.head;
+        for(let i=0; i< index; i++){
+            currentNode =  currentNode.nextNode;
+        }
+        return currentNode;
+    }
 
 }
