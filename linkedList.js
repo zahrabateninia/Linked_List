@@ -25,5 +25,18 @@ class LinkedList{
         }
         this.size++;
     }
+    // Prepend: add a new node to the beginning of the list
+    prepend(value){
+        const newNode = new Node(value)
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }else{
+            newNode.nextNode = this.head;
+            this.head = newNode;
+        }
+        this.size++;
+    }
+    
 
 }
