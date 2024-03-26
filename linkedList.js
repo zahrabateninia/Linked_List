@@ -57,5 +57,25 @@ class LinkedList{
         }
         return currentNode;
     }
+    // pop: remove the last element of the list
+    pop(){
+        if(!this.head) return null;
+        let currentNode  = this.head;
+        let previousNode = null;
+        while(currentNode.nextNode){ // while the currentNode is not tail( tail's next node is null)
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        if(previousNode){
+            previousNode.nextNode = null;
+            this.tail = previousNode;
+
+        }else{
+            this.head = null;
+            this.tail = null;
+        }
+        this.size--;
+        return currentNode.value;
+    }
 
 }
