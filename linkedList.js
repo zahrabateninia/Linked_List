@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 class Node{
     constructor(value){
         this.value = value;
@@ -37,15 +39,15 @@ class LinkedList{
         }
         this.size++;
     }
-    size(){
+    getSize(){
         return this.size;
     }    
     // Return the first node
-    head(){
+    getHead(){
         return this.head;
     }
     // Return the last node
-    tail(){
+    getTail(){
         return this.tail;
     }
     // Return the node at the given index
@@ -112,5 +114,23 @@ class LinkedList{
         result  += "null";
         return result;
     }
-    
 }
+
+// Example usage
+const list = new LinkedList();
+list.append(1);
+list.append(2);
+list.append(3);
+console.log(list.toString()); // Output: (1) -> (2) -> (3) -> null
+list.prepend(0);
+console.log(list.toString()); // Output: (0) -> (1) -> (2) -> (3) -> null
+console.log(list.getSize()); // Output: 4
+console.log(list.getHead().value); // Output: 0
+console.log(list.getTail().value); // Output: 3
+console.log(list.at(2).value); // Output: 2
+console.log(list.pop()); // Output: 3
+console.log(list.toString()); // Output: (0) -> (1) -> (2) -> null
+console.log(list.contains(2)); // Output: true
+console.log(list.contains(5)); // Output: false
+console.log(list.find(1)); // Output: 1
+console.log(list.find(5)); // Output: null
