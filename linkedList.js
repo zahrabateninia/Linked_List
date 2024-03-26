@@ -88,4 +88,18 @@ class LinkedList{
         }
         return false;
     }
+    // Return the index of the node containing the value, or null if not found
+    find(value){
+        let currentNode = this.head;
+        let index = 0;
+        while(currentNode){
+            if(currentNode.value === value){
+                return index;
+            }
+            index++;
+            currentNode = currentNode.nextNode;
+        }
+        return null;
+    }
+    
 }
