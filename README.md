@@ -13,6 +13,7 @@ Singly Linked List implemented with JavaScript
 - `contains(value)` returns true if the passed in value is in the list and otherwise returns false
 - `find(value)` returns the index of the node containing value, or null if not found
 - `toString()` returns your LinkedList objects as strings in the format: `( value ) -> ( value ) -> ( value ) -> null`
+
 I'm gonna add these features as well:
 - `insertAt(value, index)` inserts a new node with the provided value at the given index or at the end of the list if index is bigger than list size
 - `removeAt(index)` removes the node at the given index or error message if the list is empty or if the request index is bigger than list size
